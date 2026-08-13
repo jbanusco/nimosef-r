@@ -1,0 +1,10 @@
+{
+    "data_folder": "/usr/data/",
+    "save_folder": "/usr/data/derivatives/nimosef_logs/motion",
+    "split_file": "/usr/data/derivatives/manifests_nimosef/dataset_manifest.json",
+    "num_subjects": 1000,
+    "mode": "train",
+    "experiment_name": "experiment_20250311_001426",
+    "res_factor_z": 1,
+    "reprocess": false
+}

@@ -1,0 +1,17 @@
+{
+    "data_folder": "/usr/data/",
+    "save_folder": "/usr/data/derivatives/nimosef_v2/baseline",
+    "save_rec_folders": "/usr/data/derivatives/nimosef_v2/baseline/reconstructions",
+    "split_file": "/usr/data/derivatives/manifests_nimosef/dataset_manifest.json",
+    "model_to_rec": "/usr/data/derivatives/nimosef_v2/baseline/experiment_20260312_101336/checkpoint_last.pth",
+    "mode": "train",
+    "res_factor_z": 1,
+    "save_motion_corrected": true,
+    "overwrite_imgs": false,
+    "num_labels": 4,
+    "latent_size": 128,
+    "motion_size": 64,
+    "hidden_size": 128,
+    "num_res_layers": 8,
+    "linear_head": true
+}

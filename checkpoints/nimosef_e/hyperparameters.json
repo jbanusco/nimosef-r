@@ -1,0 +1,21 @@
+{
+    "latent_size": 128,
+    "motion_size": 64,
+    "hidden_size": 128,
+    "num_res_layers": 8,
+    "linear_head": true,
+    "use_trig_encoding": true,
+    "lr": 0.0005,
+    "lr_shape_code": 0.005,
+    "lambda_rec": 10.0,
+    "lambda_seg": 2.0,
+    "lambda_reg": 0.0,
+    "lambda_dsp": 1.0,
+    "lambda_reg_dsp": 0.5,
+    "lambda_jacobian": 1.0,
+    "lambda_vol": 0.01,
+    "lambda_graph_conn": 0.0,
+    "lambda_smoothness": 0.5,
+    "warmup_epochs": 50,
+    "max_dsp_weight": 1.0
+}

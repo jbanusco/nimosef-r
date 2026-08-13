@@ -1,0 +1,7 @@
+{
+    "root": "/usr/data/",
+    "patients": -1,
+    "use_roi": true,
+    "save_dir": "sa_implicit",
+    "manifest_dir": "manifests_nimosef"
+}

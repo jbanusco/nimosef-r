@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: nimosef
+Version: 0.1.0
+Summary: NIMOSEF: Neural implicit motion and segmentation functions
+Author-email: Jaume Banus <jaume.banus-cobo@chuv.ch>
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy==1.14.0
+Requires-Dist: pandas==2.2.2
+Requires-Dist: matplotlib==3.9.1
+Requires-Dist: seaborn==0.13.2
+Requires-Dist: scikit-learn>=1.5.1
+Requires-Dist: pyarrow==17.0.0
+Requires-Dist: joblib==1.4.2
+Requires-Dist: PyYAML==6.0.1
+Requires-Dist: pydantic==2.8.2
+Requires-Dist: six==1.16.0
+Requires-Dist: torchmetrics==1.4.0
+Requires-Dist: torchdiffeq==0.2.4
+Requires-Dist: torch_geometric==2.5.3
+Requires-Dist: xgboost==2.1.0
+Requires-Dist: optuna==3.6.1
+Requires-Dist: wandb==0.17.5
+Requires-Dist: tensorboard==2.18.0
+Requires-Dist: nibabel==5.2.1
+Requires-Dist: torchdata==0.7.1
+Requires-Dist: nitransforms==23.0.1
+Requires-Dist: scikit-image==0.25.2
+Requires-Dist: umap-learn==0.5.8
+Requires-Dist: geomstats==2.8.0
+Requires-Dist: pyvista==0.46.3
+Requires-Dist: statsmodels==0.14.5
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: bandit; extra == "dev"
+Requires-Dist: safety; extra == "dev"
+Dynamic: license-file

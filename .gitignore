@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# Test folders
+scratch/
+paper/
+
+# VSCode
+.vscode/
+
+# Pytest
+.pytest_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Environment
+.env
+.venv/
+*.env
+*.venv
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Conda
+.conda
+
+# Antigravity temporal files and directories
+.antigravity/
+
+# Claude
+.delegate/
+.claude/
+CLAUDE.m
