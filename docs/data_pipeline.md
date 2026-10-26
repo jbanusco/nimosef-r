@@ -106,6 +106,24 @@ computation, or `--bbox x y z` to set it manually. Output format:
 }
 ```
 
+(The `bbox` above is only an example.)
+
+> **Important: `bbox` must match the checkpoint.** The network sees coordinates
+> normalized as `(rwc_local - center) / (bbox / 2)`. If `--bbox` is not given,
+> it is computed from your own data, which will differ from the one used to
+> train the model. A pretrained checkpoint then receives coordinates scaled
+> differently along each axis and produces stretched or squashed
+> reconstructions. When using the released checkpoints, pass the training
+> bbox explicitly, in both `preprocess_data` and `generate_splits`:
+>
+> ```bash
+> --bbox 524.1553327773272 524.1553327773272 120.0
+> ```
+>
+> This is the ACDC training bbox (mm) used for both `checkpoints/nimosef_e`
+> and `checkpoints/nimosef_r`; it is also stored under `"bbox"` in each
+> checkpoint's `hyperparameters.json`.
+
 ---
 
 ## 4. Loading the dataset in PyTorch

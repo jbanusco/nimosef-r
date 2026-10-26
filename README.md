@@ -106,6 +106,14 @@ python -m nimosef.training.generate_results \
   --save_rec_folders /path/to/output/reconstructions
 ```
 
+**Normalization bounding box (`bbox`).** The network operates on coordinates normalized as `(rwc_local - center) / (bbox / 2)`, so the `bbox` in your `dataset_manifest.json` must be the one used at training time. If you leave `--bbox` unset when preprocessing, it is computed from *your* data, the coordinates are then scaled differently along each axis from what the pretrained weights saw, and reconstructions come out stretched or squashed. For both pretrained checkpoints (trained on ACDC) use:
+
+```bash
+--bbox 524.1553327773272 524.1553327773272 120.0   # mm; also stored in checkpoints/*/hyperparameters.json
+```
+
+Pass it to `nimosef.data.preprocess_data` (or `nimosef.data.generate_splits`) when preparing your own data for these checkpoints.
+
 Set `--riemannian False` for `checkpoints/nimosef_e/model.pth` (Euclidean latents) instead — it **must** match the checkpoint, since it selects a different model architecture (the flag's default, `False`, is *not* the value NIMOSEF-R needs). `--mode` must be `train`: both checkpoints only have subject-specific latent codes for the 105-subject training cohort they were fit on (see the paper's Discussion on the lack of a held-out test split) — `val`/`test` subjects aren't in `shape_code.weight` and will fail to load.
 
 If subject manifests were written from inside a container (e.g. via `scripts/run_train.sh`'s Singularity/SLURM setup) they'll contain container-internal paths (`/usr/data/...`); set the `DATA_PATH` environment variable to your real dataset root and `nimosef.data.dataset.NiftiDataset` will substitute it automatically.

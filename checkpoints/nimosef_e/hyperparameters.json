@@ -17,5 +17,6 @@
     "lambda_graph_conn": 0.0,
     "lambda_smoothness": 0.5,
     "warmup_epochs": 50,
-    "max_dsp_weight": 1.0
+    "max_dsp_weight": 1.0,
+    "bbox": [524.1553327773272, 524.1553327773272, 120.0]
 }
